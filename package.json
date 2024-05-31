@@ -4,8 +4,9 @@
   "description": "webpack course by Armin Hooshmand.",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --config webpack.config.dev.js",
-    "prod": "webpack --config webpack.config.prod.js",
+    "dev": "webpack serve --config webpack.config.dev.js",
+    "build:dev": "webpack --config webpack.config.dev.js",
+    "build:prod": "webpack --config webpack.config.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,6 +27,7 @@
   "homepage": "https://github.com/RealMrHex/Webpack-Course#readme",
   "devDependencies": {
     "webpack": "^5.91.0",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
   }
 }
