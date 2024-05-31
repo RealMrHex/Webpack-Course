@@ -1,3 +1,4 @@
-import logger from "./logger.js";
+import Counter from "./components/counter/Counter";
 
-logger('Hello Internet!');
+const counter = new Counter();
+counter.render();
