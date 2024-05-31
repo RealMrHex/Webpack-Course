@@ -1,12 +1,19 @@
 import './counter.css';
 import './counter.scss';
+import Logo from './logo.svg';
 
 class Counter {
 
   render()
   {
+    const logo = document.createElement('img');
+    logo.src = Logo;
+    logo.classList.add('logo');
+
     const div = document.createElement("div");
     div.classList.add('counter-wrapper');
+
+    div.appendChild(logo);
 
     const counter = document.createElement("span");
     counter.innerText = "0";
