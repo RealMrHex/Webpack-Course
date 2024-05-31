@@ -2,4 +2,32 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn {
+    outline: none;
+    border: none;
+    padding: 0.25rem 1.5rem;
+    border-radius: 0.2rem;
+}
+
+.btn-success {
+    color: white;
+    background-color: #25ac52;
+    cursor: pointer;
+}
+
+.btn-danger {
+    color: white;
+    background-color: indianred;
+    cursor: pointer;
 }
