@@ -1,4 +1,5 @@
 import './counter.css';
+import './counter.scss';
 
 class Counter {
 
