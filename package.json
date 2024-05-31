@@ -1,0 +1,30 @@
+{
+  "name": "webpack",
+  "version": "1.0.0",
+  "description": "webpack course by Armin Hooshmand.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RealMrHex/Webpack-Course.git"
+  },
+  "keywords": [
+    "Webpack",
+    "Course",
+    "Armin Hooshmand",
+    "Sabz learn"
+  ],
+  "author": "Armin Hooshmand",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RealMrHex/Webpack-Course/issues"
+  },
+  "homepage": "https://github.com/RealMrHex/Webpack-Course#readme",
+  "devDependencies": {
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
