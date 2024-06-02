@@ -31,6 +31,18 @@ module.exports = {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
       },
+      {
+        test: /\.js$/i,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: [
+              ['@babel/preset-env', { targets: "ie 11" }]
+            ]
+          }
+        }
+      }
     ],
   },
   mode: "development",
