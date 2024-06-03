@@ -3,7 +3,7 @@ body {
   min-height: 100svh;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.55rem;
   align-items: center;
   justify-content: center;
 }
