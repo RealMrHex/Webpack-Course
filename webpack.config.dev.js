@@ -5,9 +5,12 @@ const TerserPlugin = require("terser-webpack-plugin");
 const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
-  entry: "./src/main.js",
+  entry: {
+    "home": "./src/pages/home/home-page.js",
+    "about": "./src/pages/about/about-page.js",
+  },
   output: {
-    filename: "app-[contenthash].js",
+    filename: "js/[name]-[contenthash].js",
     path: path.resolve(__dirname, "./dist"),
     clean: true,
   },
@@ -55,9 +58,24 @@ module.exports = {
     ],
   },
   plugins: [
-    new MiniCssExtractPlugin({ filename: 'css/app-[contenthash].css' }),
-    new HtmlWebpackPlugin({ template: 'public/index.html', minify: true }),
     new ESLintPlugin(),
+    new MiniCssExtractPlugin({ filename: 'css/[name]-[contenthash].css' }),
+    new HtmlWebpackPlugin(
+      {
+         template: 'public/index.html',
+         filename: 'home.html',
+         chunks: ["home"],
+         minify: false
+      }
+    ),
+    new HtmlWebpackPlugin(
+      {
+         template: 'public/index.html',
+         filename: 'about.html',
+         chunks: ["about"],
+         minify: false
+      }
+    ),
   ],
   mode: "development",
 };
