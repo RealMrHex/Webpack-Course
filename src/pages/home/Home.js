@@ -1,5 +1,4 @@
 import './home.scss';
-import Alert from '../../components/alert/Alert';
 
 class Home
 {
@@ -20,14 +19,28 @@ class Home
         caption.classList.add('caption');
 
 
+        const button = document.createElement('button');
+        button.classList.add('btn-alert');
+        button.innerText = 'نمایش پیغام';
+        button.addEventListener(
+        'click',
+         () => 
+         {
+            import('../../components/alert/Alert')
+            .then(
+                (module) =>
+                {
+                    const Alert = module.default;
+                    const _alert = new Alert();
+                    _alert.success('لود ماژول به صورت lazy با موفقیت انجام شد.');
+                }
+            );
+         }
+        );
+
         body.appendChild(title);
         body.appendChild(caption);
-
-        const _alert = new Alert();
-        _alert.info('این یک متن هشدار برای این صفحه است.');
-        _alert.warning('این یک متن هشدار برای این صفحه است.');
-        _alert.danger('این یک متن هشدار برای این صفحه است.');
-        _alert.success('این یک متن هشدار برای این صفحه است.');
+        body.appendChild(button);
     }
 }
 
