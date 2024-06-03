@@ -1,0 +1,29 @@
+.alert-wrapper {
+    display: flex;
+    padding: 8px 0;
+}
+
+.alert {
+    padding: 8px 16px;
+    border-radius: 8px;
+
+    &.info {
+        color: #3095fa;
+        background-color: #eaf4ff;
+    }
+
+    &.success {
+        color: #0aaa40;
+        background-color: #e6ffef;
+    }
+
+    &.danger {
+        color: #cd5c5c;
+        background-color: #ffe4e4;
+    }
+
+    &.warning {
+        color: #ffa760;
+        background-color: #ffe9d6;
+    }
+}

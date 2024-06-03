@@ -1,4 +1,5 @@
 import './home.scss';
+import Alert from '../../components/alert/Alert';
 
 class Home
 {
@@ -21,6 +22,12 @@ class Home
 
         body.appendChild(title);
         body.appendChild(caption);
+
+        const _alert = new Alert();
+        _alert.info('این یک متن هشدار برای این صفحه است.');
+        _alert.warning('این یک متن هشدار برای این صفحه است.');
+        _alert.danger('این یک متن هشدار برای این صفحه است.');
+        _alert.success('این یک متن هشدار برای این صفحه است.');
     }
 }
 
