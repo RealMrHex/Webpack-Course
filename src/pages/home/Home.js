@@ -26,7 +26,7 @@ class Home
         'click',
          () => 
          {
-            import('../../components/alert/Alert')
+            import('UIKit/Alert')
             .then(
                 (module) =>
                 {

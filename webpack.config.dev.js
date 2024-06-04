@@ -3,6 +3,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserPlugin = require("terser-webpack-plugin");
 const ESLintPlugin = require('eslint-webpack-plugin');
+const { ModuleFederationPlugin } = require('webpack').container;
 
 module.exports = {
   entry: {
@@ -80,6 +81,15 @@ module.exports = {
          filename: 'about.html',
          chunks: ["about"],
          minify: false
+      }
+    ),
+    new ModuleFederationPlugin(
+      {
+        name: "WebPack",
+        filename: "remote.js",
+        remotes: {
+          "UIKit": "UIKit@http://localhost:9001/remote.js",
+        }
       }
     ),
   ],
