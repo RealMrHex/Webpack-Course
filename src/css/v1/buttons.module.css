@@ -1,0 +1,22 @@
+.btn {
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 600;
+    outline: none;
+    appearance: none;
+}
+
+.btn-success {
+    background-color: #2b9348;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #ee6055;
+    color: white;
+}
+
+.btn-warning {
+    background-color: #fb6107;
+    color: white;
+}
